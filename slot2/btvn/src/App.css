@@ -1,0 +1,87 @@
+/* Tổng thể */
+.App {
+  padding: 20px;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+}
+
+.App h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Container chia 5 cột */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 học sinh 1 hàng */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Thẻ Card */
+.student-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Ảnh */
+.img-box {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nội dung */
+.student-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.student-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.student-content p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Nhãn lớp */
+.grade-label {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  background: #e8f4fd;
+  color: #3498db;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/* Mobile: tự co lại khi màn hình nhỏ */
+@media (max-width: 1024px) {
+  .student-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .student-grid { grid-template-columns: repeat(1, 1fr); }
+}
