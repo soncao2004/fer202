@@ -1,0 +1,103 @@
+.menu {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.menu-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.menu-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.menu-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #e74c3c;
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.menu-card h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+}
+
+.menu-price {
+  margin-bottom: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.new-price {
+  color: #f5b301;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu-btn {
+  background-color: #f5b301;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-wrapper {
+  margin-top: auto;   
+  display: flex;
+  justify-content: center;
+}
+
+
+.menu-btn:hover {
+  background-color: #e0a800;
+}
+.menu-card img {
+  width: 250px;
+  height: 300px;     
+  object-fit: cover;  
+}
+.menu {
+    background-color: #333;
+}
