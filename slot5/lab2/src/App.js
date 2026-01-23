@@ -6,7 +6,6 @@ import OurMenu from "./components/menu/OurMenu";
 import BookTable from "./components/book/BookTable";
 import Footer from "./components/layout/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./App.css";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<><Banner /><OurMenu /></>} />
-          <Route path="/about" element={<div className="py-5 text-center text-white"><h2>Our Story</h2></div>} />
+          <Route path="/about" element={<div className="py-5 text-center text-white"><h2>About Pizza Palace</h2></div>} />
           <Route path="/contact" element={<BookTable />} />
         </Routes>
         <Footer />

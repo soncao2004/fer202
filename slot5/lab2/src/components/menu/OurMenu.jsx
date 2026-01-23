@@ -14,7 +14,7 @@ function OurMenu() {
 
   return (
     <Container className="my-5">
-      <h2 className="text-center mb-5 fw-bold text-uppercase" style={{color: '#ffc107'}}>Pizza Palace Menu</h2>
+      <h2 className="text-center mb-5 fw-bold" style={{color: '#ffc107'}}>EXCLUSIVE MENU</h2>
       <Row xs={1} md={2} lg={3} className="g-4">
         {pizzaData.map((pizza) => (
           <Col key={pizza.id}>
@@ -25,19 +25,13 @@ function OurMenu() {
               </div>
               <Card.Body className="d-flex flex-column text-center">
                 <Card.Title className="fw-bold fs-4" style={{color: '#ffc107'}}>{pizza.name}</Card.Title>
-                <Card.Text className="opacity-75 small flex-grow-1">{pizza.description}</Card.Text>
                 <div className="mb-3">
                   <span className="h4 fw-bold" style={{color: '#ffc107'}}>${pizza.price}</span>
                   {pizza.oldPrice && <span className="text-decoration-line-through ms-2 opacity-50 small">${pizza.oldPrice}</span>}
                 </div>
-                {/* Sửa thành 2 nút: View Details và Buy */}
                 <div className="d-flex gap-2">
-                  <Button variant="outline-warning" className="w-50 rounded-0 fw-bold" onClick={() => handleShow(pizza)}>
-                    VIEW DETAILS
-                  </Button>
-                  <Button variant="warning" className="w-50 rounded-0 fw-bold">
-                    BUY
-                  </Button>
+                  <Button variant="outline-warning" className="w-50 rounded-0 fw-bold" onClick={() => handleShow(pizza)}>VIEW DETAILS</Button>
+                  <Button variant="warning" className="w-50 rounded-0 fw-bold">BUY</Button>
                 </div>
               </Card.Body>
             </Card>
@@ -45,7 +39,6 @@ function OurMenu() {
         ))}
       </Row>
 
-      {/* Modal hiển thị thông tin chi tiết */}
       <Modal show={show} onHide={handleClose} centered size="lg">
         {selectedPizza && (
           <>
@@ -53,12 +46,10 @@ function OurMenu() {
               <Modal.Title className="fw-bold">{selectedPizza.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body style={{backgroundColor: '#262626', color: '#fff'}}>
-              <Row className="align-items-center">
+              <Row>
+                <Col md={6}><img src={selectedPizza.image} alt={selectedPizza.name} className="img-fluid rounded border border-warning" /></Col>
                 <Col md={6}>
-                  <img src={selectedPizza.image} alt={selectedPizza.name} className="img-fluid rounded border border-warning" />
-                </Col>
-                <Col md={6}>
-                  <h4 style={{color: '#ffc107'}}>${selectedPizza.price}</h4>
+                  <h4 className="fw-bold" style={{color: '#ffc107'}}>${selectedPizza.price}</h4>
                   <p className="opacity-75">{selectedPizza.description}</p>
                   <p>Category: <Badge bg="info">Premium Pizza</Badge></p>
                 </Col>
