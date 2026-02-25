@@ -1,0 +1,80 @@
+/* App.css */
+:root {
+  --pizza-red: #d9534f;
+  --pizza-yellow: #ffc107;
+  --pizza-dark: #212529;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sửa lỗi Navbar */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.8rem !important;
+  letter-spacing: 1px;
+}
+
+/* Hiệu ứng trang trí tiêu đề */
+.page-title {
+  color: var(--pizza-red);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.page-title::after {
+  content: '';
+  width: 60%;
+  height: 4px;
+  background: var(--pizza-yellow);
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+}
+
+/* Danh mục hình tròn trang Home */
+.category-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.category-circle:hover {
+  transform: scale(1.1) rotate(5deg);
+  border-color: var(--pizza-yellow);
+}
+
+/* Card tin tức chuyên nghiệp */
+.news-card {
+  border: none !important;
+  border-radius: 15px !important;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.hover-zoom {
+  transition: 0.5s;
+}
+
+.news-card:hover .hover-zoom {
+  transform: scale(1.1);
+}
